@@ -9,10 +9,10 @@ def test_login():
         print("İlk Sayfa Başlığı:", page.title())
 
         page.click("xpath=//*[@id='header']/div[1]/div/div[2]/ul/li[5]/a")
-        page.wait_for_timeout(2000)
+        page.wait_for_timeout(1500)
 
         page.fill("input[name='username']", "example@gmail.com")
-        page.wait_for_timeout(2000)
+        page.wait_for_timeout(1500)
 
         page.fill("input[name='password']", "testpass1234+")
         page.wait_for_timeout(1000)
@@ -21,7 +21,7 @@ def test_login():
         page.wait_for_selector("xpath=//*[@id='header']/div[1]/div/div[2]/ul/li[4]")
 
         page.wait_for_load_state('load')
-        page.wait_for_timeout(2000)
+        page.wait_for_timeout(1500)
 
         page.click("button#search-button")
         page.wait_for_load_state('load')
